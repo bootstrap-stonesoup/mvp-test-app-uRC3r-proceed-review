@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: test-mvp-component-poip
+  namespace: mvp-dev-ycgg-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio-qe/test-images@sha256:2a364318dfd8ea79e8cef5e6a7f6c6d02155e17627955de697da0b4bfe99981f
+        name: hacbs-jvm-build-test-project
+        resources: {}
+status: {}
